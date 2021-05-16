@@ -3,10 +3,12 @@ df = pd.read_csv("BTC 18Jul2010-14May2021.csv", parse_dates=True, index_col='Dat
 df = df[['Close']]
 df = df.loc[::-1] 
 
-import locale
-from locale import atof
-locale.setlocale(locale.LC_NUMERIC, '')
-df = df.applymap(atof)
+#import locale
+#from locale import atof
+#locale.setlocale(locale.LC_NUMERIC, '')
+#df = df.applymap(atof)
+
+df['Close'] = df['Close'].str.replace(",","").astype(float)
 
 import streamlit as st
 from datetime import date
