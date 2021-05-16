@@ -33,6 +33,7 @@ yf_data = yf_data[['Close']]
 df = df.append(yf_data)
 
 df.plot()
+st.pyplot()
 
 #2012 cycle using previous record high
 #df[0] - 18 Jul 2010
@@ -40,8 +41,6 @@ df.plot()
 
 rec_high_value_before_2012_halving = df[0:865]['Close'].max()
 rec_high_date_before_2012_halving = df[0:865]['Close'].idxmax()
-
-rec_high_value_before_2012_halving, rec_high_date_before_2012_halving
 
 from datetime import datetime, timedelta
 halving2012 = datetime.strptime('28/11/12', '%d/%m/%y') 
