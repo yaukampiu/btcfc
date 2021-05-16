@@ -25,7 +25,8 @@ def load_data(ticker):
     yf_data.reset_index(inplace=True)
     return yf_data
 
-st.title('BTC price forecast for the 2020 cycle - assuming the History will repeat and follow the % increase same as that of 2012/2016 cycle')
+st.header('BTC price forecast for the 2020 cycle') 
+st.header('if the history will repeat and follow the % increase same as that of 2012/2016 cycle')
 data_load_state = st.text('Loading data...')
 yf_data = load_data('BTC-USD')
 data_load_state.text('Loading data... done!')
@@ -257,9 +258,9 @@ plt.text(x_today, 0, (x_today.strftime("%d %b %Y"),'${:,.0f}'.format(y_today)))
 # show legend
 plt.legend()
 
-plt.title("BTC price projection")
+plt.title("BTC price projection (USD)")
 plt.xlabel("Date")
-plt.ylabel("BTC price")
+plt.ylabel("BTC price (USD)")
 # show graph
 plt.show()
 st.pyplot()
