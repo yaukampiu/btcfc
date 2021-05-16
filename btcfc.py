@@ -174,22 +174,22 @@ import matplotlib.pyplot as plt
 df1=pd.DataFrame({'# of Days': range(x_max), '2012': df2012_ath['change'], '2016': df2016_ath['change'], '2020': df2020_ath['change'], 'average(2012,2016)': df2012_2016_avg_ath['change'] })
 
 from matplotlib.pyplot import figure
-figure(figsize=(16, 8), dpi=80)
+#figure(figsize=(16, 8), dpi=80)
 
 # multiple line plots
-plt.plot( '# of Days', '2012', data=df1, marker='', color='green', linewidth=2)
-plt.plot( '# of Days', '2016', data=df1, marker='', color='blue', linewidth=2)
-plt.plot( '# of Days', '2020', data=df1, marker='', color='red', linewidth=2)
-plt.plot( '# of Days', 'average(2012,2016)', data=df1, marker='', color='yellow', linewidth=2)
+#plt.plot( '# of Days', '2012', data=df1, marker='', color='green', linewidth=2)
+#plt.plot( '# of Days', '2016', data=df1, marker='', color='blue', linewidth=2)
+#plt.plot( '# of Days', '2020', data=df1, marker='', color='red', linewidth=2)
+#plt.plot( '# of Days', 'average(2012,2016)', data=df1, marker='', color='yellow', linewidth=2)
 # show legend
-plt.legend()
+#plt.legend()
 
-plt.title("BTC price % change since last record high in previous cycle")
-plt.xlabel("# of Days")
-plt.ylabel("BTC price % change")
+#plt.title("BTC price % change since last record high in previous cycle")
+#plt.xlabel("# of Days")
+#plt.ylabel("BTC price % change")
 # show graph
-plt.show()
-st.pyplot()
+#plt.show()
+#st.pyplot()
 
 
 cycle_2020_start_value = df2020_ath['Close'][0]
