@@ -98,6 +98,7 @@ plt.xlabel("# of Days since cycle Halving date")
 plt.ylabel("BTC price % change")
 # show graph
 plt.show()
+st.pyplot()
 
 rec_high_value_in_2012_cycle = df[index2012:index2016]['Close'].max()
 rec_high_date_in_2012_cycle = df[index2012:index2016]['Close'].idxmax()
@@ -186,6 +187,7 @@ plt.xlabel("# of Days")
 plt.ylabel("BTC price % change")
 # show graph
 plt.show()
+st.pyplot()
 
 
 cycle_2020_start_value = df2020_ath['Close'][0]
@@ -258,4 +260,4 @@ plt.xlabel("Date")
 plt.ylabel("BTC price")
 # show graph
 plt.show()
-
+st.pyplot()
