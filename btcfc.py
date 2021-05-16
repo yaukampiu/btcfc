@@ -26,7 +26,8 @@ def load_data(ticker):
     return yf_data
 
 st.info('BTC price forecast for the 2020 cycle') 
-st.header('if the history will repeat and follow the % increase same as that of 2012/2016 cycle')
+st.markdown('if the history will repeat and follow the % increase same as that of 2012/2016 cycle')
+st.warning('This is not a financial advice')
 data_load_state = st.text('Loading data...')
 yf_data = load_data('BTC-USD')
 data_load_state.text('Loading data... done!')
