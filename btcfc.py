@@ -34,10 +34,10 @@ yf_data = yf_data[['Close']]
 
 df = df.append(yf_data)
 
-fig = plt.figure()
 #df.plot()
-plt.plot(df)
-st.pyplot(fig)
+#fig = plt.figure()
+#plt.plot(df)
+#st.pyplot(fig)
 
 #2012 cycle using previous record high
 #df[0] - 18 Jul 2010
@@ -85,21 +85,21 @@ import matplotlib.pyplot as plt
 df1=pd.DataFrame({'# of Days': range(x_max), '2012': df2012['change'], '2016': df2016['change'], '2020': df2020['change'] })
 
 from matplotlib.pyplot import figure
-figure(figsize=(16, 8), dpi=80)
+#figure(figsize=(16, 8), dpi=80)
 
 # multiple line plots
-plt.plot( '# of Days', '2012', data=df1, marker='', color='green', linewidth=2)
-plt.plot( '# of Days', '2016', data=df1, marker='', color='blue', linewidth=2)
-plt.plot( '# of Days', '2020', data=df1, marker='', color='red', linewidth=2)
+#plt.plot( '# of Days', '2012', data=df1, marker='', color='green', linewidth=2)
+#plt.plot( '# of Days', '2016', data=df1, marker='', color='blue', linewidth=2)
+#plt.plot( '# of Days', '2020', data=df1, marker='', color='red', linewidth=2)
 # show legend
-plt.legend()
+#plt.legend()
 
-plt.title("BTC price % change since cycle Halving date")
-plt.xlabel("# of Days since cycle Halving date")
-plt.ylabel("BTC price % change")
+#plt.title("BTC price % change since cycle Halving date")
+#plt.xlabel("# of Days since cycle Halving date")
+#plt.ylabel("BTC price % change")
 # show graph
-plt.show()
-st.pyplot()
+#plt.show()
+#st.pyplot()
 
 rec_high_value_in_2012_cycle = df[index2012:index2016]['Close'].max()
 rec_high_date_in_2012_cycle = df[index2012:index2016]['Close'].idxmax()
