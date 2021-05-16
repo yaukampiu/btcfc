@@ -1,5 +1,6 @@
 Cython
 locales
+datetime
 numpy
 pandas
 matplotlib
