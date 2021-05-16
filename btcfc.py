@@ -33,7 +33,7 @@ yf_data = yf_data[['Close']]
 
 df = df.append(yf_data)
 
-fig, ax = plt.subplots()
+fig = plt.figure()
 df.plot()
 st.pyplot(fig)
 
