@@ -12,6 +12,7 @@ df = df.loc[::-1]
 df['Close'] = df['Close'].str.replace(",","").astype(float)
 
 import streamlit as st
+st.set_option('deprecation.showPyplotGlobalUse', False)
 from datetime import date
 import yfinance as yf
 from plotly import graph_objs as go
