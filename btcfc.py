@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt 
 df = pd.read_csv("BTC 18Jul2010-14May2021.csv", parse_dates=True, index_col='Date',)
 df = df[['Close']]
 df = df.loc[::-1] 
@@ -221,7 +222,7 @@ x0 = cycle_2020_start_date_from_previous_ath
 y0 = cycle_2020_cyclebase
 
 # Data
-import matplotlib.pyplot as plt 
+
 #df1=pd.DataFrame({'x': x, '2012': df2012_ath['price'], '2016': df2016_ath['price'], '2020': df2020_ath['price'], 'start value': cycle_2020_start_value })
 #df1=pd.DataFrame({'x': x, '2012': df2012_ath['price'], '2016': df2016_ath['price'], '2020': df2020_ath['price'], 'average(2012,2016)': df2012_2016_avg_ath['price']})
 df1=pd.DataFrame({'x': x, '2012': df2012_ath.iloc[0:x_max]['price'], '2016': df2016_ath.iloc[0:x_max]['price'], '2020': df2020_ath.iloc[0:x_max]['price'], 'average(2012,2016)': df2012_2016_avg_ath.iloc[0:x_max]['price']})
