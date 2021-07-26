@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
+import streamlit as st
+
 df = pd.read_csv("BTC 18Jul2010-14May2021.csv", parse_dates=True, index_col='Date',)
 df = df[['Close']]
 df = df.loc[::-1] 
@@ -16,7 +18,7 @@ st.pyplot(fig)
 
 df['Close'] = df['Close'].str.replace(",","").astype(float)
 
-import streamlit as st
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 from datetime import date
 import yfinance as yf
