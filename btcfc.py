@@ -5,7 +5,6 @@ import streamlit as st
 df = pd.read_csv("BTC 18Jul2010-14May2021.csv", parse_dates=True, index_col='Date',)
 df = df[['Close']]
 df = df.iloc[::-1] 
-print(df.head())
 
 #print(df.head())
 #print(df.tail())
@@ -43,10 +42,10 @@ yf_data = yf_data[['Close']]
 
 df = df.append(yf_data)
 
-df.plot()
-fig = plt.figure()
-plt.plot(df)
-st.pyplot(fig)
+#df.plot()
+#fig = plt.figure()
+#plt.plot(df)
+#st.pyplot(fig)
 
 #2012 cycle using previous record high
 #df[0] - 18 Jul 2010
