@@ -4,6 +4,11 @@ df = pd.read_csv("BTC 18Jul2010-14May2021.csv", parse_dates=True, index_col='Dat
 df = df[['Close']]
 df = df.loc[::-1] 
 
+df.plot()
+fig = plt.figure()
+plt.plot(df)
+st.pyplot(fig)
+
 #import locale
 #from locale import atof
 #locale.setlocale(locale.LC_NUMERIC, '')
@@ -19,7 +24,7 @@ from plotly import graph_objs as go
 START = "2021-05-16"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-#@st.cache
+@st.cache
 def load_data(ticker):
     yf_data = yf.download(ticker, START, TODAY)
     yf_data.reset_index(inplace=True)
