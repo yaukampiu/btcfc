@@ -19,7 +19,7 @@ from plotly import graph_objs as go
 START = "2021-05-16"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-@st.cache
+#@st.cache
 def load_data(ticker):
     yf_data = yf.download(ticker, START, TODAY)
     yf_data.reset_index(inplace=True)
