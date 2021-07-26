@@ -37,10 +37,10 @@ yf_data = yf_data[['Close']]
 
 df = df.append(yf_data)
 
-#df.plot()
-#fig = plt.figure()
-#plt.plot(df)
-#st.pyplot(fig)
+df.plot()
+fig = plt.figure()
+plt.plot(df)
+st.pyplot(fig)
 
 #2012 cycle using previous record high
 #df[0] - 18 Jul 2010
