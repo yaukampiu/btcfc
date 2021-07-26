@@ -5,7 +5,9 @@ import streamlit as st
 df = pd.read_csv("BTC 18Jul2010-14May2021.csv", parse_dates=True, index_col='Date',)
 print(df.head())
 df = df[['Close']]
+print(df.head())
 df = df.loc[::-1] 
+print(df.head())
 
 #print(df.head())
 #print(df.tail())
